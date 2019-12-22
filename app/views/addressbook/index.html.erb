@@ -1,2 +1,23 @@
-<h1>Addressbook#index</h1>
-<p>Find me in app/views/addressbook/index.html.erb</p>
+<form action="/addressbook/index" method="GET">
+	<input type="text" name="keywords" />
+	<input type="submit" value="Search" />
+</form>
+
+<table>        
+	<% @addresses.each do |code, address| %>
+	<tr>
+		<td> <%= code %> </td>
+		<td> </td>
+		<td> </td>
+		<td> </td>
+	</tr>
+		<% address.each do |address_contents| %>
+		<tr>
+			<td> </td>
+			<% address_contents.each do |content| %>
+			<td> <%= content %> </td>
+			<% end %>
+		</tr>
+		<% end %>
+	<% end %>
+</table>
