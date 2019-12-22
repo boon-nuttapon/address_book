@@ -6,6 +6,10 @@ Rails version used: 6.0.2
 
 How to run the application:
 
+ - Update gems
+ 
+ 　　bundle install
+
  - Run server
  
  　　rails s
